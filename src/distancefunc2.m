@@ -1,0 +1,39 @@
+p(1,:)=a1(1,:);
+p(2,:)=a2(1,:);
+p(3,:)=a3(1,:);
+p(4,:)=a4(1,:);
+[b,i]=sort(p);
+[c,j]=sort(D_base);
+dis(1,:)=j(1,:);%dis is 2 rows (1)node(2)distance
+dis(2,:)=c(2,:);
+ j=2;
+ k=2;
+ l=2;
+ m=2;
+for i=1:1:s
+      if(dis(1,i)==1)
+          data(1,j)=dis(2,i);
+         data1(1,j)=dis(2,i); %data is node distances
+          j=j+1; 
+      end
+      if(dis(1,i)==2)
+          data(2,k)=dis(2,i);
+          data2(1,k)=dis(2,i);
+          k=k+1; 
+      end
+      if(dis(1,i)==3)
+         data(3,l)=dis(2,i);
+         data3(1,l)=dis(2,i);
+          l=l+1; 
+      end
+      if(dis(1,i)==4)
+          data(4,m)=dis(2,i);
+          data4(1,m)=dis(2,i);
+          m=m+1; 
+      end
+end
+data1(1,1)=0;
+data2(1,1)=0;
+data3(1,1)=0;
+data4(1,1)=0;
+[z,j]=sort(D_base);
